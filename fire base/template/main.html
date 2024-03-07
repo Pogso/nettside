@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+</head>
+
+<body>
+     <h1 id="Konsert">
+        Konserter
+
+    <nav>
+        <ul>
+            <li><a id="knapp1" href="/konserter">Konserter</a></li>
+            <li><a id="knapp2" href="/">Legg til Konsert</a></li>
+        </ul>
+    </nav>
+
+     </h1>
+     <div id="div1">
+        <form action="/submit" method="post">
+        <label for="navn">navn</label> <br>
+        <input type="text" id="Navn" name="Navn" value=""> <br> <br>
+        <label for="sted">sted</label> <br>
+        <input type="text" id="sted" name="sted" value=""> <br><br>
+        <label for="tid">tid</label> <br>
+        <input type="datetime" id="tid" name="tid" value=""> <br>    
+        <button type="submit" value="submit">Lagre</button> <br>
+     </form>
+     </div>
+
+</body>
+</html>

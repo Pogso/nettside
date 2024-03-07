@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+    <h1 id="Konsert">
+        Konserter
+    <nav>
+        <ul>
+            <li><a id="knapp1" href="/konserter">Konserter</a></li>
+            <li><a id="knapp2" href="/">Legg til Konsert</a></li>
+        </ul>
+    </nav>
+     </h1>
+     <div id="div1">
+        {% for key, value in konserter2.items() %}
+        <div>
+            {{ value }} <br> 
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

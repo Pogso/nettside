@@ -1,0 +1,23 @@
+
+.message-container {
+    display: flex;
+}
+
+
+.message{
+    display: flex;
+    height: 50%; 
+    width: 20%;
+    background-color: aqua;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+#toggleButton{
+    margin-left: 5cap;
+}
