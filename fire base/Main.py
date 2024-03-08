@@ -9,6 +9,7 @@ ref =db.reference('/')
 
 app=Flask(__name__, template_folder="./template")
 
+
 @app.route('/')
 def Input():
     return render_template('main.html')
@@ -16,13 +17,9 @@ def Input():
 @app.route('/konserter')
 def Konserter():
     konserter1 = ref.get()
-    cleaned_data = {}  
-    for key, value in konserter1.items():
-        
-        cleaned_value = str(value).replace("[{", "").replace("}]", "").replace("'", "")
-        
-        cleaned_data[key] = cleaned_value
-    return render_template('Konserter.html', konserter2=cleaned_data)
+ 
+
+    return render_template('Konserter.html', konserter2=konserter1)
 
 @app.route('/submit', methods=['POST'])
 def submit():
