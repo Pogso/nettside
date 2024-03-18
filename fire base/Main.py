@@ -17,7 +17,6 @@ def Input():
 @app.route('/konserter')
 def Konserter():
     konserter1 = ref.get()
- 
 
     return render_template('Konserter.html', konserter2=konserter1)
 

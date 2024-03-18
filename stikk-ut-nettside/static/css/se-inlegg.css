@@ -1,0 +1,27 @@
+nav{
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    margin-left: -1%;
+    margin-right: -1%;
+    margin-top: 3%;
+    height: 100px;
+}
+
+#legg-inn-tur{
+    color: white;
+}
+
+#se-innlegg{
+    color: black;
+}
+
+#stikk-ut{
+    color: white;
+}
+
+a{
+    font-size: 225%;
+    text-decoration: none;
+}
