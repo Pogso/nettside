@@ -8,15 +8,29 @@
 </head>
 <body>
     <nav>
-        <a id="legg-inn-tur" href="/legg-inn.html">legg inn tur</a>  <a id="stikk-ut" href="/">Stikk ut</a>  <a id="se-innlegg" href="se-inlegg.html">se innlegg</a>
+        <div id="link-container1">
+            <a id="legg-inn-tur" href="/legg-inn.html">legg inn tur</a>
+        </div>
+        <div id="link-container2">
+            <a id="stikk-ut" href="/">Stikk ut</a>
+        </div>
+        <div id="link-container3">
+            <a id="se-innlegg" href="se-inlegg.html">se innlegg</a>
+        </div>
     </nav>
 
     <div id="container">
-        {% for key, value in StikkUt1.items() %}
-        <div>
-            {{ value }} <br><br> 
-        </div>
-        {% endfor %}
+        {% if StikkUtData %}
+            {% for key, value in StikkUtData.items() %}
+                <div>
+                    <h3>{{ value.navn }}</h3>
+                    <p>Sted: {{ value.sted }}</p>
+                    <p>Tid: {{ value.tid }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No data available.</p>
+        {% endif %}
     </div>
 </body>
 </html>
