@@ -7,15 +7,14 @@ firebase_admin.initialize_app(cred, {"databaseURL":"https://stikk-ut-e35ce-defau
 
 ref =db.reference('/')
 
-app=Flask(__name__, template_folder="./html-css")
+app=Flask(__name__, template_folder="./template")
 
+
+@app.route('/submit')
+def Input():
+    return render_template('legg-inn.html')
 
 @app.route('/')
-def Input():
-    reference = ref.get()
-    return render_template('stikk-ut.html', StikkUt1=reference) if reference else render_template('stikk-ut.html', StikkUt1={"Error": False})
-
-@app.route('/stikk-ut')
 def StikkUt():
     reference = ref.get()
 

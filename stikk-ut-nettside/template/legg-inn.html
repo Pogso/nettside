@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="legg-inn.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/legg-inn.css')}}">
 </head>
 <body>
     <nav>
-        <a id="legg-inn-tur" href="legg-inn.html">legg inn tur</a>  <a id="stikk-ut" href="/">Stikk ut</a>  <a id="se-innlegg" href="se-inlegg.html">se innlegg</a>
+        <div id="link-container1">
+            <a id="legg-inn-tur" href="/submit">legg inn tur</a>
+        </div>
+        <div id="link-container2">
+            <a id="stikk-ut" href="/">Stikk ut</a>
+        </div>
+        <div id="link-container3">
+            <a id="se-innlegg" href="se-inlegg.html">se innlegg</a>
+        </div>
     </nav>
 
     <div id="div1">
