@@ -18,7 +18,7 @@ def Input():
 def StikkUt():
     reference = ref.get()
 
-    return render_template('stikk-ut.html', StikkUt1={"key": "value"})
+    return render_template('stikk-ut.html', StikkUt1=reference)
 
 @app.route('/submit', methods=['POST'])
 def submit():

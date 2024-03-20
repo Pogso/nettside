@@ -9,7 +9,7 @@
 <body>
     <nav>
         <div id="link-container1">
-            <a id="legg-inn-tur" href="/legg-inn.html">legg inn tur</a>
+            <a id="legg-inn-tur" href="/submit">legg inn tur</a>
         </div>
         <div id="link-container2">
             <a id="stikk-ut" href="/">Stikk ut</a>
@@ -20,17 +20,11 @@
     </nav>
 
     <div id="container">
-        {% if StikkUtData %}
-            {% for key, value in StikkUtData.items() %}
-                <div>
-                    <h3>{{ value.navn }}</h3>
-                    <p>Sted: {{ value.sted }}</p>
-                    <p>Tid: {{ value.tid }}</p>
-                </div>
-            {% endfor %}
-        {% else %}
-            <p>No data available.</p>
-        {% endif %}
+        {% for key, value in StikkUt1.items() %}
+        <div>
+            {{ key }}: {{ value }} <br><br>
+        </div>
+        {% endfor %}
     </div>
 </body>
 </html>
