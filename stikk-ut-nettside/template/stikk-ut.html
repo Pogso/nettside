@@ -21,10 +21,10 @@
 
     <div id="container">
         {% for StikkUtTur in StikkUt1 %}
-        <div>
+        <div id="container1">
             <p>{{ StikkUtTur.navn }}</p>
             <p>{{ StikkUtTur.beskrivelse }}</p>
-            <p>{{ StikkUtTur.bilde }}</p>
+            <p><img src="{{ StikkUtTur.bilde }}" alt="bilde"></p>
             <p>{{ StikkUtTur.tid }}</p>
             <p>{{ StikkUtTur.sted }}</p>
         </div>
