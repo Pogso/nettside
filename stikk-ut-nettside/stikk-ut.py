@@ -16,9 +16,23 @@ def Input():
 
 @app.route('/')
 def StikkUt():
-    reference = ref.get()
+    StikkUtTurer=[]
+    finnTurer = ref.get()
+    sortert_Turer = sorted(finnTurer.items(), key=lambda x: (x[1]["navn"], x[1]["sted"]))
 
-    return render_template('stikk-ut.html', StikkUt1=reference)
+    for i, turer2 in sortert_Turer:
+        StikkUtTur = {
+                "navn": turer2["navn"],
+                "sted": turer2["sted"],
+                "tid": turer2["tid"],
+                "bilde" : turer2["bilde"],
+                "beskrivelse" : turer2["beskrivelse"]
+        }
+        StikkUtTurer.append(StikkUtTur)
+
+
+
+    return render_template('stikk-ut.html', StikkUt1=StikkUtTurer)
 
 @app.route('/submit', methods=['POST'])
 def submit():

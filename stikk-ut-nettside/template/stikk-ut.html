@@ -20,9 +20,13 @@
     </nav>
 
     <div id="container">
-        {% for key, value in StikkUt1.items() %}
+        {% for StikkUtTur in StikkUt1 %}
         <div>
-            {{ key }}: {{ value }} <br><br>
+            <p>{{ StikkUtTur.navn }}</p>
+            <p>{{ StikkUtTur.beskrivelse }}</p>
+            <p>{{ StikkUtTur.bilde }}</p>
+            <p>{{ StikkUtTur.tid }}</p>
+            <p>{{ StikkUtTur.sted }}</p>
         </div>
         {% endfor %}
     </div>
